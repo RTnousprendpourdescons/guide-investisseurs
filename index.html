@@ -132,6 +132,10 @@
         .card-alert h3 { font-size: 1.15rem; color: var(--danger); }
         .card-alert p { font-size: 0.92rem; }
         .card-alert .card-arrow { color: var(--danger); margin-top: 0.5rem; font-size: 0.9rem; }
+        .card-badge { display: inline-block; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; vertical-align: middle; margin-left: 0.4rem; }
+        .badge-indiv { background: rgba(108, 140, 255, 0.15); color: var(--accent-light); }
+        .badge-collectif { background: rgba(107, 255, 184, 0.15); color: var(--success); }
+        .badge-info { background: rgba(255, 197, 107, 0.15); color: var(--warning); }
         @media (max-width: 700px) {
             .hero h1 { font-size: 1.6rem; }
             .hero .subtitle { font-size: 0.95rem; }
@@ -282,49 +286,49 @@
         <div class="cards">
             <a href="fiche-signalconso.html" class="card">
                 <div class="card-icon">&#128680;</div>
-                <h3>Fiche 1 — Signaler à la DGCCRF (SignalConso)</h3>
+                <h3>Fiche 1 — Signaler à la DGCCRF (SignalConso) <span class="card-badge badge-indiv">individuel</span></h3>
                 <p>Le plus simple : alerter la Répression des Fraudes via leur plateforme officielle. Aucun prérequis, formulaire en 5 étapes.</p>
                 <div class="card-arrow">Ouvrir le guide &rarr;</div>
             </a>
             <a href="fiche-amf.html" class="card">
                 <div class="card-icon">&#9878;</div>
-                <h3>Fiche 2 — Saisir le Médiateur de l'AMF</h3>
+                <h3>Fiche 2 — Saisir le Médiateur de l'AMF <span class="card-badge badge-indiv">individuel</span></h3>
                 <p>Médiation individuelle gratuite. Nécessite un courrier recommandé préalable + 2 mois d'attente avant de saisir le Médiateur.</p>
                 <div class="card-arrow">Ouvrir le guide &rarr;</div>
             </a>
             <a href="fiche-arguments.html" class="card">
                 <div class="card-icon">&#128220;</div>
-                <h3>Fiche 3 — Arguments juridiques</h3>
+                <h3>Fiche 3 — Arguments juridiques <span class="card-badge badge-info">référence</span></h3>
                 <p>Fondements légaux, articles du Code civil et du Code de la consommation, tableau récapitulatif.</p>
                 <div class="card-arrow">Ouvrir le guide &rarr;</div>
             </a>
             <a href="fiche-ufc.html" class="card">
                 <div class="card-icon">&#9878;</div>
-                <h3>Fiche 4 — UFC-Que Choisir</h3>
+                <h3>Fiche 4 — UFC-Que Choisir <span class="card-badge badge-collectif">collectif</span></h3>
                 <p>Association de consommateurs. Peut lancer une action de groupe si suffisamment de plaignants. Fort poids médiatique.</p>
                 <div class="card-arrow">Ouvrir le guide &rarr;</div>
             </a>
             <a href="fiche-plainte.html" class="card">
                 <div class="card-icon">&#128220;</div>
-                <h3>Fiche 5 — Plainte pénale (procureur)</h3>
+                <h3>Fiche 5 — Plainte pénale (procureur) <span class="card-badge badge-indiv">individuel</span></h3>
                 <p>Voie pénale : courrier au procureur de la République pour escroquerie. La démarche la plus lourde mais la plus dissuasive.</p>
                 <div class="card-arrow">Ouvrir le guide &rarr;</div>
             </a>
             <a href="fiche-acpr.html" class="card">
                 <div class="card-icon">&#128680;</div>
-                <h3>Fiche 6 — ACPR (Banque de France) <span style="font-size:0.7rem;background:rgba(139,144,160,0.2);color:var(--text-muted);padding:0.15rem 0.5rem;border-radius:10px;vertical-align:middle;margin-left:0.3rem;">bonus</span></h3>
+                <h3>Fiche 6 — ACPR (Banque de France) <span class="card-badge badge-indiv">individuel</span> <span class="card-badge" style="background:rgba(139,144,160,0.2);color:var(--text-muted);">bonus</span></h3>
                 <p>Optionnel. Signaler au régulateur bancaire si les produits financiers n'avaient pas les autorisations nécessaires.</p>
                 <div class="card-arrow">Ouvrir le guide &rarr;</div>
             </a>
             <a href="fiche-clcv.html" class="card">
                 <div class="card-icon">&#9878;</div>
-                <h3>Fiche 7 — CLCV</h3>
+                <h3>Fiche 7 — CLCV <span class="card-badge badge-collectif">collectif</span></h3>
                 <p>Association nationale de consommateurs (300+ antennes locales). Signalement via Vigie-Conso ou accompagnement en local.</p>
                 <div class="card-arrow">Ouvrir le guide &rarr;</div>
             </a>
             <a href="fiche-avi.html" class="card">
                 <div class="card-icon">&#128680;</div>
-                <h3>Fiche 8 — Collectif AVI</h3>
+                <h3>Fiche 8 — Collectif AVI <span class="card-badge badge-collectif">collectif</span></h3>
                 <p>Aide aux Victimes d'Influenceurs. Regroupe les plaintes en recours collectifs déposés simultanément au même procureur.</p>
                 <div class="card-arrow">Ouvrir le guide &rarr;</div>
             </a>
