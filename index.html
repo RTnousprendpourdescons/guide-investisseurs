@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide de signalement AMF &amp; DGCCRF — Investisseurs</title>
+    <style>
+        :root {
+            --bg: #0f1117;
+            --surface: #1a1d27;
+            --surface2: #232733;
+            --border: #2e3345;
+            --text: #e2e4eb;
+            --text-muted: #8b90a0;
+            --accent: #6c8cff;
+            --accent-light: #8fa8ff;
+            --danger: #ff6b6b;
+            --warning: #ffc56b;
+            --success: #6bffb8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1040 0%, #0f1117 50%, #101828 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-light), var(--warning));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero .subtitle {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .prejudice-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .prejudice-section h2 { font-size: 1.4rem; margin-bottom: 1rem; }
+        .formula-box {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--danger);
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            text-align: center;
+            color: var(--warning);
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; }
+        th {
+            background: var(--surface2);
+            color: var(--accent-light);
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+            font-size: 0.9rem;
+        }
+        td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.93rem; }
+        tr:hover td { background: rgba(108, 140, 255, 0.05); }
+        .highlight-cell { color: var(--danger); font-weight: 700; }
+        .conclusion-box {
+            background: rgba(255, 107, 107, 0.08);
+            border: 1px solid rgba(255, 107, 107, 0.25);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            color: var(--danger);
+            font-weight: 500;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.8rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(108, 140, 255, 0.12);
+        }
+        .card-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+        .card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--accent-light); }
+        .card p { color: var(--text-muted); font-size: 0.92rem; flex-grow: 1; }
+        .card .card-arrow { color: var(--accent); margin-top: 1rem; font-size: 0.9rem; font-weight: 600; }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Dossier Investisseurs</h1>
+        <p class="subtitle">Guide complet pour vous protéger suite au plan de remédiation du 14 mars 2026</p>
+        <a href="#procedures" style="display:inline-block;margin-top:1.5rem;background:var(--accent);color:#fff;padding:0.7rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;transition:background 0.2s;">Voir les procédures &darr;</a>
+    </div>
+
+    <div class="container">
+
+        <section class="prejudice-section">
+            <h2 style="color:var(--accent-light);">Les entités du groupe concerné</h2>
+            <p style="margin-bottom:1rem;">Le mail de remédiation du 14 mars 2026, signé par le dirigeant, émane de l'émetteur de titres financiers en coopération avec la société contractante. Voici la structure juridique identifiée dans les documents contractuels :</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Entité</th>
+                        <th>Rôle</th>
+                        <th>RCS Paris</th>
+                        <th>Siège</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Société contractante (SAS)</strong></td>
+                        <td>Contractant direct avec les investisseurs (contrats "Roy")</td>
+                        <td>951 387 513</td>
+                        <td>33 rue La Fayette, 75009 Paris</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Émetteur (SA)</strong></td>
+                        <td>Émettrice de titres financiers, signataire du mail de remédiation</td>
+                        <td>940 627 664</td>
+                        <td>34 bd des Italiens, 75009 Paris</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Structure de liquidité</strong></td>
+                        <td>Conditions Générales de Vente / Boutique</td>
+                        <td>901 272 690</td>
+                        <td>20 rue J-B Pigalle, 75009 Paris</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gestionnaire plateforme (SAS)</strong></td>
+                        <td>Gestionnaire de la plateforme en ligne</td>
+                        <td>&mdash;</td>
+                        <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Holding internationale</strong></td>
+                        <td>Société holding du groupe</td>
+                        <td>&mdash;</td>
+                        <td>&mdash;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top:0.8rem;color:var(--text-muted);font-size:0.88rem;">Sources : CGV du 9 mai 2024, CGU du 9 septembre 2024, Contrat du 25 octobre 2024, mail du 14 mars 2026.</p>
+        </section>
+
+        <section class="prejudice-section">
+            <h2 style="color:var(--warning);">Les 4 options du plan de remédiation (mail du 14 mars 2026)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                        <th>Délai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Option 1</strong></td>
+                        <td>Résiliation anticipée : indemnité = 2% &times; montant introduction (2&euro;) &times; années restantes. <span style="color:var(--danger);font-weight:700;">Spoliante (voir analyse ci-dessous).</span></td>
+                        <td>Avant le 20/04/2026</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Option 2</strong></td>
+                        <td>Conversion en titres obligataires "All Stars" (négociables sur une plateforme à Amsterdam). Conditionnée à l'approbation d'un prospectus non encore publié.</td>
+                        <td>Avant le 20/04/2026</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Option 3</strong></td>
+                        <td>Conserver les contrats en l'état jusqu'à leur expiration (fin de la 10ème année).</td>
+                        <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Option 4</strong></td>
+                        <td>Uniquement pour les utilisateurs en <strong>perte de capital</strong>. Souscrire des actions de la holding à 10 700&euro;/action, payables par compensation de la perte constatée. <em>"Par convention, la valeur résiduelle des Roys est nulle"</em>, ce qui creuse artificiellement les pertes.</td>
+                        <td>Avant le 20/04/2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="prejudice-section">
+            <h2 style="color:var(--danger);">Analyse du préjudice : une formule qui punit la fidélité (Option 1)</h2>
+            <p>L'offre de rachat (Option 1) repose sur la formule suivante :</p>
+            <div class="formula-box">
+                Indemnité = 2% &times; Montant introduction (2&euro;) &times; Années restantes (sur 10 ans)
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ancienneté</th>
+                        <th>Années restantes</th>
+                        <th>Indemnité (Roy à 2&euro;)</th>
+                        <th>% de la valeur initiale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1 an</td><td>9 ans</td><td>0,36&euro;</td><td class="highlight-cell">18%</td></tr>
+                    <tr><td>4 ans</td><td>6 ans</td><td>0,24&euro;</td><td class="highlight-cell">12%</td></tr>
+                    <tr><td>7 ans</td><td>3 ans</td><td>0,12&euro;</td><td class="highlight-cell">6%</td></tr>
+                    <tr><td>9 ans</td><td>1 an</td><td>0,04&euro;</td><td class="highlight-cell">2%</td></tr>
+                </tbody>
+            </table>
+            <div class="conclusion-box">
+                Plus un investisseur est fidèle, moins il reçoit. Un détenteur depuis 4 ans ne récupère que <strong>12% de sa mise initiale</strong>. La fidélité est mécaniquement punie par ce calcul de sortie.
+            </div>
+        </section>
+
+        <h2 id="procedures" style="margin-bottom: 0.5rem; font-size: 1.3rem;">Procédures disponibles</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1rem;">Classées de la plus simple à la plus complexe. Toutes sont gratuites et complémentaires.</p>
+
+        <div class="cards">
+            <a href="fiche-signalconso.html" class="card">
+                <div class="card-icon">&#128680;</div>
+                <h3>Fiche 1 — Signaler à la DGCCRF (SignalConso)</h3>
+                <p>Le plus simple : alerter la Répression des Fraudes via leur plateforme officielle. Aucun prérequis, formulaire en 5 étapes.</p>
+                <div class="card-arrow">Ouvrir le guide &rarr;</div>
+            </a>
+            <a href="fiche-amf.html" class="card">
+                <div class="card-icon">&#9878;</div>
+                <h3>Fiche 2 — Saisir le Médiateur de l'AMF</h3>
+                <p>Médiation individuelle gratuite. Nécessite un courrier recommandé préalable + 2 mois d'attente avant de saisir le Médiateur.</p>
+                <div class="card-arrow">Ouvrir le guide &rarr;</div>
+            </a>
+            <a href="fiche-arguments.html" class="card">
+                <div class="card-icon">&#128220;</div>
+                <h3>Fiche 3 — Arguments juridiques</h3>
+                <p>Fondements légaux, articles du Code civil et du Code de la consommation, tableau récapitulatif.</p>
+                <div class="card-arrow">Ouvrir le guide &rarr;</div>
+            </a>
+            <a href="fiche-ufc.html" class="card">
+                <div class="card-icon">&#9878;</div>
+                <h3>Fiche 4 — UFC-Que Choisir</h3>
+                <p>Association de consommateurs. Peut lancer une action de groupe si suffisamment de plaignants. Fort poids médiatique.</p>
+                <div class="card-arrow">Ouvrir le guide &rarr;</div>
+            </a>
+            <a href="fiche-plainte.html" class="card">
+                <div class="card-icon">&#128220;</div>
+                <h3>Fiche 5 — Plainte pénale (procureur)</h3>
+                <p>Voie pénale : courrier au procureur de la République pour escroquerie. La démarche la plus lourde mais la plus dissuasive.</p>
+                <div class="card-arrow">Ouvrir le guide &rarr;</div>
+            </a>
+            <a href="fiche-acpr.html" class="card">
+                <div class="card-icon">&#128680;</div>
+                <h3>Fiche 6 — ACPR (Banque de France) <span style="font-size:0.7rem;background:rgba(139,144,160,0.2);color:var(--text-muted);padding:0.15rem 0.5rem;border-radius:10px;vertical-align:middle;margin-left:0.3rem;">bonus</span></h3>
+                <p>Optionnel. Signaler au régulateur bancaire si les produits financiers n'avaient pas les autorisations nécessaires.</p>
+                <div class="card-arrow">Ouvrir le guide &rarr;</div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Guide informatif — Ne constitue pas un conseil juridique. En cas de doute, consultez un avocat spécialisé.</p>
+        <p style="margin-top: 0.5rem;">
+            Sources :
+            <a href="https://www.amf-france.org/fr/le-mediateur-de-lamf">AMF</a> &middot;
+            <a href="https://signal.conso.gouv.fr">SignalConso</a> &middot;
+            <a href="https://www.economie.gouv.fr/dgccrf">DGCCRF</a>
+        </p>
+    </footer>
+</body>
+</html>

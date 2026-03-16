@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche 3 — Arguments juridiques</title>
+    <style>
+        :root {
+            --bg: #0f1117;
+            --surface: #1a1d27;
+            --surface2: #232733;
+            --border: #2e3345;
+            --text: #e2e4eb;
+            --text-muted: #8b90a0;
+            --accent: #6c8cff;
+            --accent-light: #8fa8ff;
+            --danger: #ff6b6b;
+            --warning: #ffc56b;
+            --success: #6bffb8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .topbar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0.8rem 2rem; display: flex; align-items: center; gap: 1rem; }
+        .topbar a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+        .topbar a:hover { text-decoration: underline; }
+        .topbar .sep { color: var(--text-muted); }
+        .topbar .current { color: var(--text); font-weight: 600; }
+        .hero-small { background: linear-gradient(135deg, #1a1040 0%, #0f1117 100%); border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; }
+        .hero-small h1 { max-width: 860px; margin: 0 auto; font-size: 2rem; font-weight: 700; color: var(--accent-light); }
+        .hero-small .badge { display: inline-block; background: rgba(108, 140, 255, 0.1); color: var(--accent); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem; border: 1px solid rgba(108, 140, 255, 0.2); }
+        .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        h2 { font-size: 1.3rem; color: var(--accent-light); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+        h2:first-child { margin-top: 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; }
+        th { background: var(--surface2); color: var(--accent-light); padding: 0.85rem 1rem; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); font-size: 0.9rem; }
+        td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.93rem; vertical-align: top; }
+        tr:hover td { background: rgba(108, 140, 255, 0.04); }
+        td code { background: var(--surface2); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.85rem; color: var(--warning); white-space: nowrap; }
+        .argument-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin: 1.25rem 0; }
+        .argument-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .argument-card .article { color: var(--warning); font-size: 0.88rem; font-weight: 600; margin-bottom: 0.6rem; }
+        .argument-card p { color: var(--text-muted); font-size: 0.95rem; }
+        .argument-card .quote { background: var(--surface2); border-left: 3px solid var(--accent); padding: 0.8rem 1.2rem; margin-top: 0.8rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; color: var(--text); font-style: italic; }
+        .danger-box { background: rgba(255, 107, 107, 0.08); border: 1px solid rgba(255, 107, 107, 0.2); border-left: 4px solid var(--danger); border-radius: 8px; padding: 1rem 1.5rem; margin: 1rem 0; font-size: 0.95rem; }
+        .info-box { background: rgba(108, 140, 255, 0.08); border: 1px solid rgba(108, 140, 255, 0.2); border-left: 4px solid var(--accent); border-radius: 8px; padding: 1rem 1.5rem; margin: 1rem 0; font-size: 0.95rem; }
+        .nav-bottom { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+        .nav-bottom a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .nav-bottom a:hover { text-decoration: underline; }
+        a { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a href="index.html">Accueil</a>
+        <span class="sep">/</span>
+        <span class="current">Fiche 3 — Arguments juridiques</span>
+    </div>
+
+    <div class="hero-small">
+        <div style="max-width:860px;margin:0 auto;">
+            <span class="badge">Fondements légaux</span>
+            <h1>Fiche 3 — Arguments juridiques</h1>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h2>Tableau récapitulatif</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:25%">Argument</th>
+                    <th style="width:30%">Fondement juridique</th>
+                    <th>Application au cas d'espèce</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Rupture unilatérale de contrat</strong></td>
+                    <td><code>Art. 1217</code> et <code>Art. 1224</code> Code civil</td>
+                    <td>L'opérateur rompt un engagement contractuel de 10 ans (la "Date de Fin" est définie dans le contrat comme le dernier jour de la 10ème année) sans indemnisation juste ni consentement des investisseurs</td>
+                </tr>
+                <tr>
+                    <td><strong>Pratique commerciale trompeuse</strong></td>
+                    <td><code>Art. L121-2</code> à <code>Art. L121-4</code> Code de la consommation</td>
+                    <td>Rendements promis lors de la souscription nettement supérieurs au taux de 2% servant de base au calcul de l'indemnité. Chiffres de redistribution incohérents (2,5M&euro; &rarr; 7M&euro;).</td>
+                </tr>
+                <tr>
+                    <td><strong>Clause abusive</strong></td>
+                    <td><code>Art. L212-1</code> Code de la consommation</td>
+                    <td>Formule de rachat créant un déséquilibre significatif au détriment du consommateur (12% de la valeur initiale pour 4 ans d'ancienneté)</td>
+                </tr>
+                <tr>
+                    <td><strong>Obligation d'information</strong></td>
+                    <td><code>Art. L111-1</code> Code de la consommation</td>
+                    <td>Incohérence des chiffres, <em>(si applicable)</em> censure des questions et suppression du dialogue, Option 4 qui déclare la "valeur résiduelle des Roys nulle" par convention</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Développement des arguments</h2>
+
+        <div class="argument-card">
+            <h3>1. Rupture unilatérale de contrat</h3>
+            <div class="article">Articles 1217 et 1224 du Code civil</div>
+            <p>
+                Les documents contractuels (Contrat du 25/10/2024, CGV du 09/05/2024, CGU du 09/09/2024) prévoyaient un engagement d'une durée de <strong>10 ans</strong>. Le contrat définit la "Date de Fin" comme <em>"la date correspondant au dernier jour de la dixième (10ème) année suivant la date de fin de la période d'Introduction"</em>.
+            </p>
+            <p style="margin-top:0.6rem;">
+                L'article 1217 du Code civil prévoit que la partie envers laquelle l'engagement n'a pas été exécuté peut <strong>demander réparation des conséquences de l'inexécution</strong>. L'indemnisation proposée (12% de la valeur initiale) ne couvre manifestement pas le préjudice subi.
+            </p>
+            <div class="quote">
+                Le contrat prévoyait 10 ans. Le plan de remédiation y met fin après 4 ans en ne proposant que 12% de la valeur initiale. C'est une rupture dont l'indemnisation est dérisoire.
+            </div>
+        </div>
+
+        <div class="argument-card">
+            <h3>2. Pratique commerciale trompeuse</h3>
+            <div class="article">Articles L121-2 à L121-4 du Code de la consommation</div>
+            <p>
+                Une pratique commerciale est trompeuse lorsqu'elle repose sur des <strong>allégations fausses ou de nature à induire en erreur</strong> portant notamment sur les caractéristiques essentielles du bien ou du service, dont le prix et les résultats attendus.
+            </p>
+            <p style="margin-top:0.6rem;">
+                Les contrats Roy ont été commercialisés en mettant en avant des <strong>rendements attractifs</strong> significativement supérieurs au taux de 2% qui sert aujourd'hui de base au calcul de l'indemnité de sortie. Les investisseurs ont été induits en erreur sur le rendement réel de leur placement.
+            </p>
+            <div class="danger-box" style="margin-top:0.8rem;">
+                <strong>Aggravant :</strong> Les chiffres de redistribution annoncés sont incohérents : passage de <strong>2,5M&euro;</strong> (août 2025) à <strong>7M&euro;</strong> (mars 2026), en intégrant rétroactivement des "bonus missions" et des opérations de "market making" pour gonfler artificiellement les montants. Le mail de remédiation lui-même précise que ces 7M&euro; incluent "rendement, opération marketing, liquidité de marché/market making".
+            </div>
+        </div>
+
+        <div class="argument-card">
+            <h3>3. Clause abusive</h3>
+            <div class="article">Article L212-1 du Code de la consommation</div>
+            <p>
+                Sont abusives les clauses qui ont pour objet ou pour effet de créer, au détriment du consommateur, un <strong>déséquilibre significatif</strong> entre les droits et obligations des parties au contrat.
+            </p>
+            <p style="margin-top:0.6rem;">
+                La formule de rachat <code>2% &times; prix &times; années restantes</code> crée un déséquilibre manifeste :
+            </p>
+            <ul style="padding-left:1.5rem;margin-top:0.5rem;color:var(--text-muted);">
+                <li>L'investisseur ne récupère que <strong>12%</strong> de sa mise pour 4 ans d'ancienneté</li>
+                <li>Les investisseurs les plus <strong>anciens et fidèles</strong> sont les plus pénalisés</li>
+                <li>L'opérateur conserve <strong>88%</strong> de la valeur initiale sans contrepartie</li>
+            </ul>
+        </div>
+
+        <div class="argument-card">
+            <h3>4. Manquement à l'obligation d'information</h3>
+            <div class="article">Article L111-1 du Code de la consommation</div>
+            <p>
+                Le professionnel doit communiquer au consommateur, de manière lisible et compréhensible, les <strong>caractéristiques essentielles</strong> du bien ou du service, dont le prix.
+            </p>
+            <p style="margin-top:0.6rem;">Manquements constatés :</p>
+            <ul style="padding-left:1.5rem;margin-top:0.5rem;color:var(--text-muted);">
+                <li>Chiffres <strong>incohérents</strong> sur les sommes redistribuées (2,5M&euro; &rarr; 7M&euro;)</li>
+                <li><em>(si applicable)</em> <strong>Censure</strong> des investisseurs posant des questions légitimes (bannissement Discord, suppression du salon FR)</li>
+                <li>Dialogue contradictoire <strong>empêché</strong> sur les conditions du plan de remédiation</li>
+                <li>Option 4 déclarant la <strong>"valeur résiduelle des Roys nulle"</strong> par convention, sans justification</li>
+            </ul>
+        </div>
+
+        <div class="argument-card">
+            <h3>5. Complexité de la structure juridique</h3>
+            <div class="article">Opacité du Groupe</div>
+            <p>
+                Le groupe opère via une multiplicité de sociétés aux rôles distincts, rendant difficile l'identification de l'interlocuteur responsable :
+            </p>
+            <ul style="padding-left:1.5rem;margin-top:0.5rem;color:var(--text-muted);">
+                <li>La <strong>société contractante</strong> (SAS, RCS 951 387 513) conclut les contrats Roy</li>
+                <li>L'<strong>émetteur</strong> (SA, RCS 940 627 664) signe le mail de remédiation</li>
+                <li>La <strong>structure de liquidité</strong> (RCS 901 272 690) gère les CGV et la boutique</li>
+                <li>Le <strong>gestionnaire de plateforme</strong> (SAS) émet les CGU</li>
+                <li>Une <strong>holding</strong> propose des actions à 10 700&euro; dans l'option 4</li>
+            </ul>
+            <p style="margin-top:0.6rem;">
+                Cette structure éclatée complexifie le recours des investisseurs et dilue les responsabilités.
+            </p>
+        </div>
+
+        <h2>Point clé : la formule punit la fidélité</h2>
+
+        <div class="danger-box">
+            <p><strong>Argument central de votre dossier :</strong></p>
+            <p style="margin-top:0.5rem;">
+                La formule <code>2% &times; prix &times; années restantes</code> est <strong>mécaniquement inversée</strong> par rapport à l'équité : plus un investisseur détient son contrat depuis longtemps (plus il a "cru" au projet), moins il lui reste d'années "à courir", et donc <strong>moins son indemnité est élevée</strong>.
+            </p>
+            <p style="margin-top:0.5rem;">
+                Un investisseur de la première heure (9 ans d'ancienneté) ne toucherait que <strong>2%</strong> de sa mise initiale. C'est un comble : la fidélité est punie par un calcul de sortie dérisoire. Une indemnisation juste devrait au minimum restituer le capital investi, voire intégrer les rendements promis.
+            </p>
+        </div>
+
+        <div class="info-box">
+            <strong>Rappel :</strong> Ce guide est informatif et ne constitue pas un avis juridique. Pour une action en justice, consultez un avocat spécialisé en droit financier ou en droit de la consommation.
+        </div>
+
+        <div class="nav-bottom">
+            <a href="fiche-amf.html">&larr; Fiche 2 — AMF</a>
+            <a href="fiche-ufc.html">Fiche 4 — UFC-Que Choisir &rarr;</a>
+        </div>
+    </div>
+</body>
+</html>

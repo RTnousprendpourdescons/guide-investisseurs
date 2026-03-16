@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche 2 — Signaler sur SignalConso (DGCCRF)</title>
+    <style>
+        :root {
+            --bg: #0f1117;
+            --surface: #1a1d27;
+            --surface2: #232733;
+            --border: #2e3345;
+            --text: #e2e4eb;
+            --text-muted: #8b90a0;
+            --accent: #6c8cff;
+            --accent-light: #8fa8ff;
+            --danger: #ff6b6b;
+            --warning: #ffc56b;
+            --success: #6bffb8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .topbar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0.8rem 2rem; display: flex; align-items: center; gap: 1rem; }
+        .topbar a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+        .topbar a:hover { text-decoration: underline; }
+        .topbar .sep { color: var(--text-muted); }
+        .topbar .current { color: var(--text); font-weight: 600; }
+        .hero-small { background: linear-gradient(135deg, #1a1040 0%, #0f1117 100%); border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; }
+        .hero-small h1 { max-width: 860px; margin: 0 auto; font-size: 2rem; font-weight: 700; color: var(--accent-light); }
+        .hero-small .badge { display: inline-block; background: rgba(255, 107, 107, 0.1); color: var(--danger); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem; border: 1px solid rgba(255, 107, 107, 0.2); }
+        .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        h2 { font-size: 1.3rem; color: var(--accent-light); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+        h2:first-child { margin-top: 0; }
+        .step { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin: 1.25rem 0; position: relative; }
+        .step-number { position: absolute; top: -12px; left: 20px; background: var(--accent); color: #fff; font-weight: 700; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 20px; }
+        .step h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
+        .step p, .step ul, .step ol { color: var(--text-muted); font-size: 0.95rem; }
+        .step ul, .step ol { padding-left: 1.5rem; }
+        .step li { margin-bottom: 0.35rem; }
+        .info-box { background: rgba(108, 140, 255, 0.08); border: 1px solid rgba(108, 140, 255, 0.2); border-left: 4px solid var(--accent); border-radius: 8px; padding: 1rem 1.5rem; margin: 1rem 0; font-size: 0.95rem; }
+        .warning-box { background: rgba(255, 197, 107, 0.08); border: 1px solid rgba(255, 197, 107, 0.25); border-left: 4px solid var(--warning); border-radius: 8px; padding: 1rem 1.5rem; margin: 1rem 0; color: var(--warning); font-size: 0.95rem; }
+        .path-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1rem 0; }
+        .path-step { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0; }
+        .path-step:not(:last-child) { border-bottom: 1px dashed var(--border); }
+        .path-arrow { color: var(--accent); font-weight: bold; font-size: 1.1rem; flex-shrink: 0; }
+        .path-label { font-weight: 600; color: var(--text); }
+        .path-detail { color: var(--text-muted); font-size: 0.88rem; }
+        .template-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 2rem; margin: 1.5rem 0; font-size: 0.92rem; line-height: 1.8; position: relative; }
+        .template-box h4 { color: var(--accent-light); margin-bottom: 1rem; }
+        .template-box ul { padding-left: 1.5rem; color: var(--text); }
+        .template-box ul li { margin-bottom: 0.6rem; }
+        .template-box ul li strong { color: var(--accent-light); }
+        .copy-btn { position: absolute; top: 12px; right: 12px; background: var(--accent); color: #fff; border: none; padding: 0.4rem 0.9rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: background 0.2s; }
+        .copy-btn:hover { background: var(--accent-light); color: var(--bg); }
+        .or-separator { text-align: center; color: var(--text-muted); margin: 1rem 0; font-weight: 600; font-size: 0.9rem; }
+        .nav-bottom { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+        .nav-bottom a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .nav-bottom a:hover { text-decoration: underline; }
+        a { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a href="index.html">Accueil</a>
+        <span class="sep">/</span>
+        <span class="current">Fiche 1 — DGCCRF (SignalConso)</span>
+    </div>
+
+    <div class="hero-small">
+        <div style="max-width:860px;margin:0 auto;">
+            <span class="badge">Enquête DGCCRF</span>
+            <h1>Fiche 1 — Signaler à la DGCCRF (SignalConso)</h1>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="info-box">
+            <strong>Pourquoi SignalConso ?</strong> SignalConso alerte la DGCCRF (Répression des Fraudes) sur les pratiques commerciales trompeuses. Ce n'est pas une médiation mais un <strong>signalement qui peut déclencher une enquête administrative</strong>. Pas besoin de réclamation préalable.
+        </div>
+
+        <h2>Étape 1 — Accéder au formulaire</h2>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <h3>Aller sur SignalConso</h3>
+            <p>Rendez-vous sur <a href="https://signal.conso.gouv.fr" target="_blank" style="font-weight:600;font-size:1rem;">signal.conso.gouv.fr</a></p>
+            <p style="margin-top:0.5rem;">Le formulaire comporte <strong style="color:var(--text);">5 étapes</strong>.</p>
+        </div>
+
+        <h2>Étape 2 — Choisir la bonne catégorie</h2>
+
+        <p style="color:var(--text-muted);margin-bottom:1rem;">Deux parcours possibles :</p>
+
+        <div class="step">
+            <span class="step-number">PARCOURS A (recommandé)</span>
+            <h3>Banque, assurance et mutuelle</h3>
+            <div class="path-box">
+                <div class="path-step">
+                    <span class="path-arrow">1.</span>
+                    <div>
+                        <div class="path-label">Catégorie principale</div>
+                        <div class="path-detail">"Banque, assurance et mutuelle"</div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <span class="path-arrow">2.</span>
+                    <div>
+                        <div class="path-label">Sous-catégorie</div>
+                        <div class="path-detail">"Banques classiques et en ligne"</div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <span class="path-arrow">3.</span>
+                    <div>
+                        <div class="path-label">Type de problème</div>
+                        <div class="path-detail">"Publicité trompeuse pour crédits" ou "Autres problèmes divers"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="or-separator">— OU —</div>
+
+        <div class="step">
+            <span class="step-number">PARCOURS B (alternatif)</span>
+            <h3>Internet (hors achats)</h3>
+            <div class="path-box">
+                <div class="path-step">
+                    <span class="path-arrow">1.</span>
+                    <div>
+                        <div class="path-label">Catégorie principale</div>
+                        <div class="path-detail">"Internet (hors achats)"</div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <span class="path-arrow">2.</span>
+                    <div>
+                        <div class="path-label">Sous-catégorie</div>
+                        <div class="path-detail">"Un influenceur ou une influenceuse"</div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <span class="path-arrow">3.</span>
+                    <div>
+                        <div class="path-label">Type de problème</div>
+                        <div class="path-detail">"Produits financiers risqués, cryptoactifs, NFT"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <strong>Conseil :</strong> Le parcours A "Banque" est le plus pertinent car il s'agit de produits financiers. Utilisez le parcours B si la catégorie ne correspond pas exactement.
+        </div>
+
+        <h2>Étape 3 — Remplir les informations</h2>
+
+        <div class="step">
+            <span class="step-number">2/5</span>
+            <h3>Identifier l'entreprise</h3>
+            <p>Voir le texte type ci-dessous pour les informations exactes de la société (nom, SIRET, adresse).</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3/5</span>
+            <h3>Vos coordonnées</h3>
+            <p>Renseignez vos nom, prénom, email. Vous pouvez choisir de rester anonyme vis-à-vis de l'entreprise (mais la DGCCRF aura vos coordonnées).</p>
+        </div>
+
+        <h2>Étape 4 — Description détaillée (texte type)</h2>
+
+        <div class="template-box" id="template-sc">
+            <button class="copy-btn" onclick="copyTemplate()">Copier le texte</button>
+            <h4>Modèle de signalement SignalConso</h4>
+            <p>
+                <strong>Pratique commerciale trompeuse et rupture unilatérale de contrat — Royaltiz / Manse France SAS / Manse Emetteur SA</strong>
+            </p>
+            <br>
+            <p>
+                <strong>Entreprise concernée :</strong><br>
+                Manse France SAS — RCS Paris 951 387 513 — 33 rue La Fayette, 75009 Paris<br>
+                Manse Emetteur SA — RCS Paris 940 627 664 — 34 bd des Italiens, 75009 Paris<br>
+                Site : royaltiz.pro (anciennement royaltiz.com)
+            </p>
+            <br>
+            <p>
+                La plateforme d'investissement Royaltiz (Groupe Manse) a commercialisé des produits financiers appelés "Roys" — contrats de performance liés aux revenus de personnalités — avec des promesses de rendements attractifs sur une durée contractuelle de 10 ans.
+            </p>
+            <br>
+            <p>
+                Le 14 mars 2026, Manse Emetteur SA, en coopération avec Manse France SAS, a notifié à l'ensemble des investisseurs un "Plan de remédiation" suite à une non-conformité réglementaire. L'option de rachat (Option 1) repose sur une indemnité calculée à 2% du montant introduction (2&euro;) &times; années restantes, soit environ <strong>12% de la valeur d'émission</strong> pour un investisseur de 4 ans d'ancienneté (0,24&euro; pour un Roy souscrit à 2&euro;).
+            </p>
+            <br>
+            <p><strong>Pratiques dénoncées :</strong></p>
+            <ul>
+                <li><strong>Pratique commerciale trompeuse</strong> : Les rendements promis lors de la commercialisation étaient largement supérieurs aux 2% servant de base de calcul de l'indemnité de sortie. Les investisseurs ont été induits en erreur sur la nature et le rendement de leur placement.</li>
+                <li><strong>Manipulation des chiffres</strong> : Le montant total "redistribué" est passé de 2,5M&euro; (août 2025) à 7M&euro; (mars 2026) en intégrant rétroactivement des "bonus missions" et des opérations de "market making", gonflant artificiellement le bilan affiché.</li>
+                <li><strong>Valorisation artificielle (Option 4)</strong> : Pour les investisseurs en perte de capital, le plan propose de souscrire des actions de la holding à 10 700&euro;/action en précisant textuellement que "la valeur résiduelle des Roys est nulle", creusant artificiellement les pertes au bénéfice de l'opérateur.</li>
+                <li><strong>Censure</strong> <em>(si applicable — supprimez ce point si vous n'êtes pas concerné)</em> : Des investisseurs posant des questions légitimes ont été bannis du Discord officiel. Le salon francophone a été supprimé sans préavis.</li>
+                <li><strong>Indemnisation spoliante</strong> : Le calcul pénalise mécaniquement les investisseurs les plus anciens et les plus fidèles.</li>
+            </ul>
+            <br>
+            <p>
+                Je demande une enquête sur les pratiques commerciales de Manse France SAS, Manse Emetteur SA et du Groupe Manse opérant sous la marque Royaltiz.
+            </p>
+        </div>
+
+        <h2>Étape 5 — Pièces jointes</h2>
+
+        <div class="step">
+            <span class="step-number">5/5</span>
+            <h3>Joindre les documents</h3>
+            <ul>
+                <li>Mail du <strong>14 mars 2026</strong> (plan de remédiation, signé par Christophe Vattier) :
+                    <ul style="margin-top:0.3rem;">
+                        <li><strong>Email classique</strong> : exportez en PDF (Imprimer &rarr; PDF)</li>
+                        <li><strong>Messagerie interne</strong> : connectez-vous, ouvrez le message, <strong>Ctrl+P</strong> &rarr; "Enregistrer au format PDF"</li>
+                    </ul>
+                </li>
+                <li>Documents contractuels :
+                    <ul style="margin-top:0.3rem;">
+                        <li><a href="pdfs/contract.pdf" download>Contrat (version 25/10/2024)</a></li>
+                        <li><a href="pdfs/legal_TERMS_OF_SALE.pdf" download>CGV (version 09/05/2024)</a></li>
+                        <li><a href="pdfs/legal_TERMS_AND_CONDITIONS.pdf" download>CGU (version 09/09/2024)</a></li>
+                    </ul>
+                </li>
+                <li>Captures des rendements promis :
+                    <ul style="margin-top:0.3rem;">
+                        <li><a href="pdfs/blog/rendement-augmentation-du-max-a-50percent-2092257d.pdf" download>"Rendement max à 50% APY"</a> — plafond annoncé bien supérieur à 2%</li>
+                        <li><a href="pdfs/blog/gagnez-2000euro-par-mois-grace-au-rendement-5bca17da.pdf" download>"Gagnez +2000€/mois grâce au rendement"</a></li>
+                        <li><a href="pdfs/blog/the-yield-earn-money-by-holding-your-roy-e4ffc826.pdf" download>"Le Yield : contrat exclusif de 10 ans"</a></li>
+                        <li><a href="pdfs/blog/new-predicted-annual-yield-f90ed33c.pdf" download>"Yield Predict : 2 à 19,5% APY"</a></li>
+                        <li><a href="pdfs/blog/1-millioneuro-de-yield-verse-aux-utilisateurs-89af0196.pdf" download>"1M€ de Yield versé — 50% rendement annuel"</a></li>
+                        <li><a href="pdfs/blog/money-talk-comment-cet-etudiant-gagne-sa-vie-grace-a-royaltiz-5235f8ed.pdf" download>"Étudiant : 330€/mois, 29% annuel"</a></li>
+                    </ul>
+                </li>
+                <li>Preuves de souscription :
+                    <ul style="margin-top:0.3rem;">
+                        <li><strong>Captures de votre portefeuille</strong> sur la plateforme (Roys détenus, montant investi)</li>
+                        <li><strong>Historique des transactions</strong> (captures tant que c'est accessible + <strong>export CSV</strong> disponible sur le site)</li>
+
+                    </ul>
+                </li>
+                <li><em>(si applicable)</em> Captures des bannissements Discord</li>
+                <li>Chiffres contradictoires :
+                    <ul style="margin-top:0.3rem;">
+                        <li><a href="pdfs/blog/25-millionseuro-de-yield-paye-aux-detenteurs-de-roys-55335c95.pdf" download>"2,5M€ de yield payé"</a> (août 2025) vs <strong>7M€ dans le mail du 14/03/2026</strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <strong>Bon à savoir :</strong> Votre signalement est transmis à la DGCCRF <strong>et</strong> à l'entreprise. Elle pourra y répondre. Vous recevrez un email de suivi. Ce signalement est <strong>complémentaire</strong> à la saisine du Médiateur de l'AMF.
+        </div>
+
+        <div class="nav-bottom">
+            <a href="index.html">&larr; Retour à l'accueil</a>
+            <a href="fiche-amf.html">Fiche 2 — AMF &rarr;</a>
+        </div>
+    </div>
+
+    <script>
+        function copyTemplate() {
+            const el = document.getElementById('template-sc');
+            const text = el.innerText.replace('Copier le texte', '').replace('Modèle de signalement SignalConso', '').trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = 'Copié !';
+                setTimeout(() => btn.textContent = 'Copier le texte', 2000);
+            });
+        }
+    </script>
+</body>
+</html>

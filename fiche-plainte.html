@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche 5 — Plainte pénale au procureur</title>
+    <style>
+        :root { --bg: #0f1117; --surface: #1a1d27; --surface2: #232733; --border: #2e3345; --text: #e2e4eb; --text-muted: #8b90a0; --accent: #6c8cff; --accent-light: #8fa8ff; --danger: #ff6b6b; --warning: #ffc56b; --success: #6bffb8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .topbar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0.8rem 2rem; display: flex; align-items: center; gap: 1rem; }
+        .topbar a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+        .topbar a:hover { text-decoration: underline; }
+        .topbar .sep { color: var(--text-muted); }
+        .topbar .current { color: var(--text); font-weight: 600; }
+        .hero-small { background: linear-gradient(135deg, #1a1040 0%, #0f1117 100%); border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; }
+        .hero-small h1 { max-width: 860px; margin: 0 auto; font-size: 2rem; font-weight: 700; color: var(--accent-light); }
+        .hero-small .badge { display: inline-block; background: rgba(255, 107, 107, 0.1); color: var(--danger); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem; border: 1px solid rgba(255, 107, 107, 0.2); }
+        .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        h2 { font-size: 1.3rem; color: var(--accent-light); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+        h2:first-child { margin-top: 0; }
+        .step { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin: 1.25rem 0; position: relative; }
+        .step-number { position: absolute; top: -12px; left: 20px; background: var(--accent); color: #fff; font-weight: 700; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 20px; }
+        .step h3 { font-size: 1.1rem; margin-bottom: 0.6rem; color: var(--text); }
+        .step p, .step ul, .step ol { color: var(--text-muted); font-size: 0.95rem; }
+        .step ul, .step ol { padding-left: 1.5rem; }
+        .step li { margin-bottom: 0.35rem; }
+        .info-box { background: rgba(108, 140, 255, 0.08); border: 1px solid rgba(108, 140, 255, 0.2); border-left: 4px solid var(--accent); border-radius: 8px; padding: 1rem 1.5rem; margin: 1rem 0; font-size: 0.95rem; }
+        .warning-box { background: rgba(255, 197, 107, 0.08); border: 1px solid rgba(255, 197, 107, 0.25); border-left: 4px solid var(--warning); border-radius: 8px; padding: 1rem 1.5rem; margin: 1rem 0; color: var(--warning); font-size: 0.95rem; }
+        .danger-box { background: rgba(255, 107, 107, 0.08); border: 1px solid rgba(255, 107, 107, 0.2); border-left: 4px solid var(--danger); border-radius: 8px; padding: 1rem 1.5rem; margin: 1rem 0; font-size: 0.95rem; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th { background: var(--surface2); color: var(--accent-light); padding: 0.7rem 1rem; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); font-size: 0.88rem; }
+        td { padding: 0.6rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+        .template-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 2rem; margin: 1.5rem 0; font-size: 0.92rem; line-height: 1.8; position: relative; }
+        .template-box h4 { color: var(--accent-light); margin-bottom: 1rem; font-size: 1rem; }
+        .template-box .placeholder { background: rgba(255, 197, 107, 0.15); color: var(--warning); padding: 0.1rem 0.4rem; border-radius: 3px; font-family: monospace; font-size: 0.88rem; }
+        .copy-btn { position: absolute; top: 12px; right: 12px; background: var(--accent); color: #fff; border: none; padding: 0.4rem 0.9rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: background 0.2s; }
+        .copy-btn:hover { background: var(--accent-light); color: var(--bg); }
+        .nav-bottom { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+        .nav-bottom a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .nav-bottom a:hover { text-decoration: underline; }
+        a { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a href="index.html">Accueil</a>
+        <span class="sep">/</span>
+        <span class="current">Fiche 5 — Plainte pénale</span>
+    </div>
+
+    <div class="hero-small">
+        <div style="max-width:860px;margin:0 auto;">
+            <span class="badge">Voie pénale</span>
+            <h1>Fiche 5 — Plainte pénale au procureur de la République</h1>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="info-box">
+            <strong>Pourquoi une plainte pénale ?</strong> Contrairement aux signalements administratifs (DGCCRF, AMF), la plainte pénale vise à engager des <strong>poursuites judiciaires</strong> contre les dirigeants. C'est la démarche la plus lourde mais aussi la plus dissuasive. Elle est <strong>gratuite</strong>.
+        </div>
+
+        <div class="danger-box">
+            <strong>Qualification pénale possible :</strong>
+            <table>
+                <thead>
+                    <tr><th>Infraction</th><th>Article</th><th>Peines encourues</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Escroquerie</strong></td><td>Art. 313-1 à 313-3 Code pénal</td><td>5 ans de prison + 375 000&euro; d'amende</td></tr>
+                    <tr><td><strong>Pratique commerciale trompeuse</strong></td><td>Art. L132-2 Code de la consommation</td><td>2 ans de prison + 300 000&euro; d'amende</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:0.5rem;color:var(--text-muted);font-size:0.88rem;">Délai de prescription : <strong>6 ans</strong> à compter du dernier acte (dernier versement ou mail du 14 mars 2026).</p>
+        </div>
+
+        <h2>Deux options pour déposer plainte</h2>
+
+        <div class="step">
+            <span class="step-number">OPTION A</span>
+            <h3>Courrier au procureur de la République (recommandé)</h3>
+            <p>C'est l'option la plus adaptée à ce type de dossier. Vous envoyez une lettre au tribunal judiciaire compétent.</p>
+            <ul>
+                <li><strong>Tribunal compétent :</strong> Tribunal judiciaire de Paris (les sociétés ont leur siège à Paris 75009)</li>
+                <li><strong>Adresse :</strong> Monsieur/Madame le Procureur de la République, Tribunal judiciaire de Paris, Parvis du Tribunal de Paris, 75859 Paris Cedex 17</li>
+                <li><strong>Envoi :</strong> Courrier recommandé avec accusé de réception</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">OPTION B</span>
+            <h3>En commissariat ou gendarmerie</h3>
+            <p>Vous pouvez vous déplacer dans n'importe quel commissariat ou brigade de gendarmerie pour déposer plainte. Apportez toutes vos pièces justificatives imprimées.</p>
+        </div>
+
+        <div class="warning-box">
+            <strong>Trouver votre tribunal :</strong> Rendez-vous sur <a href="https://www.justice.fr/recherche/annuaires" target="_blank" style="color:var(--accent);">justice.fr/recherche/annuaires</a> pour trouver le tribunal judiciaire compétent. Ici, c'est le <strong>Tribunal judiciaire de Paris</strong> (siège des sociétés du groupe).
+        </div>
+
+        <h2>Modèle de plainte au procureur</h2>
+
+        <div class="template-box" id="template-plainte">
+            <button class="copy-btn" onclick="copyTemplate()">Copier le texte</button>
+            <h4>Modèle de courrier de plainte</h4>
+
+            <div id="plainte-text">
+            <p><span class="placeholder">[Prénom NOM]</span><br>
+            <span class="placeholder">[Adresse complète]</span><br>
+            <span class="placeholder">[Email]</span><br>
+            <span class="placeholder">[Téléphone]</span></p>
+            <br>
+            <p>Monsieur/Madame le Procureur de la République<br>
+            Tribunal judiciaire de Paris<br>
+            Parvis du Tribunal de Paris<br>
+            75859 Paris Cedex 17</p>
+            <br>
+            <p>Fait à <span class="placeholder">[Ville]</span>, le <span class="placeholder">[Date]</span></p>
+            <br>
+            <p><strong>Objet : Plainte pour escroquerie et pratiques commerciales trompeuses</strong></p>
+            <br>
+            <p>Monsieur/Madame le Procureur de la République,</p>
+            <br>
+            <p>J'ai l'honneur de porter plainte contre :</p>
+            <br>
+            <p>- <strong>Manse France SAS</strong>, RCS Paris 951 387 513, sise 33 rue La Fayette, 75009 Paris ;<br>
+            - <strong>Manse Emetteur SA</strong>, RCS Paris 940 627 664, sise 34 bd des Italiens, 75009 Paris ;<br>
+            - <strong>Monsieur Christophe Vattier</strong>, signataire du courrier de remédiation du 14 mars 2026, en sa qualité de dirigeant ;<br>
+            - Et toute autre personne que l'enquête permettra d'identifier.</p>
+            <br>
+            <p>Pour les faits suivants susceptibles de constituer les infractions d'<strong>escroquerie</strong> (articles 313-1 à 313-3 du Code pénal) et de <strong>pratiques commerciales trompeuses</strong> (articles L121-2 à L121-4 du Code de la consommation).</p>
+            <br>
+            <p><strong>EXPOSÉ DES FAITS :</strong></p>
+            <br>
+            <p>Les sociétés susvisées opèrent la plateforme d'investissement "Royaltiz" (royaltiz.pro), commercialisant des contrats "Roy Performance" — produits financiers liés aux revenus de personnalités sportives et artistiques — d'une durée contractuelle de 10 ans.</p>
+            <br>
+            <p>1. <strong>Souscription sous influence de manoeuvres trompeuses :</strong> J'ai investi <span class="placeholder">[MONTANT]</span>&euro; entre <span class="placeholder">[DATE DÉBUT]</span> et <span class="placeholder">[DATE FIN]</span>. La plateforme communiquait activement sur des rendements allant jusqu'à 50% APY (article de blog du 12 mars 2023), avec des témoignages d'investisseurs affichant 29% de rendement annuel et la promesse de "gagner plus de 2000&euro; par mois grâce au rendement".</p>
+            <br>
+            <p>2. <strong>Rupture unilatérale avec indemnisation dérisoire :</strong> Le 14 mars 2026, Manse Emetteur SA, en coopération avec Manse France SAS, m'a notifié un "Plan de remédiation" suite à une non-conformité réglementaire. L'Option 1 propose une résiliation anticipée avec une indemnité calculée à 2% du montant d'introduction &times; années restantes, soit <strong>12% de la valeur initiale</strong> pour un investisseur de 4 ans d'ancienneté. Cette formule pénalise mécaniquement les investisseurs les plus anciens.</p>
+            <br>
+            <p>3. <strong>Manipulation des chiffres :</strong> Le montant total annoncé comme "redistribué" aux investisseurs est passé de 2,5M&euro; (août 2025) à 7M&euro; (mars 2026), en intégrant rétroactivement des "bonus missions" et du "market making" pour gonfler artificiellement le bilan.</p>
+            <br>
+            <p>4. <strong>Valorisation artificielle des pertes (Option 4) :</strong> Pour les investisseurs en perte de capital, le plan propose de souscrire des actions de la holding à 10 700&euro; en déclarant textuellement que "la valeur résiduelle des Roys est nulle", creusant artificiellement les pertes.</p>
+            <br>
+            <p><strong>PRÉJUDICE :</strong></p>
+            <p>Mon investissement total s'élève à <span class="placeholder">[MONTANT]</span>&euro;. L'indemnité proposée (Option 1) est de <span class="placeholder">[INDEMNITÉ]</span>&euro;, soit un préjudice de <span class="placeholder">[PERTE]</span>&euro;.</p>
+            <br>
+            <p><strong>PIÈCES JOINTES :</strong></p>
+            <p>1. Mail du 14 mars 2026 (plan de remédiation, signé par Christophe Vattier)<br>
+            2. Contrat Roy Performance (version 25/10/2024)<br>
+            3. CGV (version 09/05/2024)<br>
+            4. Articles de blog promettant des rendements jusqu'à 50% APY<br>
+            5. Captures d'écran du portefeuille et historique des transactions<br>
+            6. Email de confirmation d'inscription</p>
+            <br>
+            <p>Je vous prie de bien vouloir enregistrer la présente plainte et de diligenter une enquête sur les agissements des personnes et sociétés visées.</p>
+            <br>
+            <p>Je me tiens à votre entière disposition pour tout complément d'information.</p>
+            <br>
+            <p>Veuillez agréer, Monsieur/Madame le Procureur de la République, l'expression de ma respectueuse considération.</p>
+            <br>
+            <p><span class="placeholder">[Prénom NOM]</span><br>
+            <span class="placeholder">[Signature manuscrite]</span></p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <strong>Important :</strong> Imprimez ce courrier, <strong>signez-le à la main</strong>, et envoyez-le en <strong>recommandé avec accusé de réception</strong>. Joignez des <strong>copies</strong> de vos pièces justificatives (jamais les originaux).
+        </div>
+
+        <h2>Pièces à joindre (copies)</h2>
+
+        <div class="step">
+            <span class="step-number">DOCS</span>
+            <h3>Liste des pièces justificatives</h3>
+            <ul>
+                <li>Mail du <strong>14 mars 2026</strong> (exporté en PDF)</li>
+                <li>Documents contractuels :
+                    <ul style="margin-top:0.3rem;">
+                        <li><a href="pdfs/contract.pdf" download>Contrat (25/10/2024)</a></li>
+                        <li><a href="pdfs/legal_TERMS_OF_SALE.pdf" download>CGV (09/05/2024)</a></li>
+                        <li><a href="pdfs/legal_TERMS_AND_CONDITIONS.pdf" download>CGU (09/09/2024)</a></li>
+                    </ul>
+                </li>
+                <li>Preuves des rendements promis :
+                    <ul style="margin-top:0.3rem;">
+                        <li><a href="pdfs/blog/rendement-augmentation-du-max-a-50percent-2092257d.pdf" download>"Rendement max à 50% APY"</a></li>
+                        <li><a href="pdfs/blog/gagnez-2000euro-par-mois-grace-au-rendement-5bca17da.pdf" download>"Gagnez +2000&euro;/mois"</a></li>
+                        <li><a href="pdfs/blog/money-talk-comment-cet-etudiant-gagne-sa-vie-grace-a-royaltiz-5235f8ed.pdf" download>"Étudiant : 330&euro;/mois, 29% annuel"</a></li>
+                    </ul>
+                </li>
+                <li>Captures de votre portefeuille + export CSV de l'historique</li>
+                <li><a href="pdfs/blog/25-millionseuro-de-yield-paye-aux-detenteurs-de-roys-55335c95.pdf" download>"2,5M&euro; de yield payé"</a> (août 2025) — preuve de l'incohérence avec les 7M&euro; annoncés</li>
+            </ul>
+        </div>
+
+        <div class="nav-bottom">
+            <a href="fiche-ufc.html">&larr; Fiche 4 — UFC-Que Choisir</a>
+            <a href="fiche-acpr.html">Fiche 6 — ACPR &rarr;</a>
+        </div>
+    </div>
+
+    <script>
+        function copyTemplate() {
+            const el = document.getElementById('plainte-text');
+            const text = el.innerText.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = 'Copié !';
+                setTimeout(() => btn.textContent = 'Copier le texte', 2000);
+            });
+        }
+    </script>
+</body>
+</html>

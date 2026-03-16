@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche 6 — Signaler à l'ACPR (Banque de France)</title>
+    <style>
+        :root { --bg: #0f1117; --surface: #1a1d27; --surface2: #232733; --border: #2e3345; --text: #e2e4eb; --text-muted: #8b90a0; --accent: #6c8cff; --accent-light: #8fa8ff; --danger: #ff6b6b; --warning: #ffc56b; --success: #6bffb8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .topbar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0.8rem 2rem; display: flex; align-items: center; gap: 1rem; }
+        .topbar a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+        .topbar a:hover { text-decoration: underline; }
+        .topbar .sep { color: var(--text-muted); }
+        .topbar .current { color: var(--text); font-weight: 600; }
+        .hero-small { background: linear-gradient(135deg, #1a1040 0%, #0f1117 100%); border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; }
+        .hero-small h1 { max-width: 860px; margin: 0 auto; font-size: 2rem; font-weight: 700; color: var(--accent-light); }
+        .hero-small .badge { display: inline-block; background: rgba(108, 140, 255, 0.1); color: var(--accent); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem; border: 1px solid rgba(108, 140, 255, 0.2); }
+        .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        h2 { font-size: 1.3rem; color: var(--accent-light); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+        h2:first-child { margin-top: 0; }
+        .step { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin: 1.25rem 0; position: relative; }
+        .step-number { position: absolute; top: -12px; left: 20px; background: var(--accent); color: #fff; font-weight: 700; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 20px; }
+        .step h3 { font-size: 1.1rem; margin-bottom: 0.6rem; color: var(--text); }
+        .step p, .step ul, .step ol { color: var(--text-muted); font-size: 0.95rem; }
+        .step ul, .step ol { padding-left: 1.5rem; }
+        .step li { margin-bottom: 0.35rem; }
+        .info-box { background: rgba(108, 140, 255, 0.08); border: 1px solid rgba(108, 140, 255, 0.2); border-left: 4px solid var(--accent); border-radius: 8px; padding: 1rem 1.5rem; margin: 1rem 0; font-size: 0.95rem; }
+        .template-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 2rem; margin: 1.5rem 0; font-size: 0.92rem; line-height: 1.8; position: relative; }
+        .template-box h4 { color: var(--accent-light); margin-bottom: 1rem; font-size: 1rem; }
+        .template-box .placeholder { background: rgba(255, 197, 107, 0.15); color: var(--warning); padding: 0.1rem 0.4rem; border-radius: 3px; font-family: monospace; font-size: 0.88rem; }
+        .copy-btn { position: absolute; top: 12px; right: 12px; background: var(--accent); color: #fff; border: none; padding: 0.4rem 0.9rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: background 0.2s; }
+        .copy-btn:hover { background: var(--accent-light); color: var(--bg); }
+        .nav-bottom { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+        .nav-bottom a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .nav-bottom a:hover { text-decoration: underline; }
+        a { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a href="index.html">Accueil</a>
+        <span class="sep">/</span>
+        <span class="current">Fiche 6 — ACPR</span>
+    </div>
+
+    <div class="hero-small">
+        <div style="max-width:860px;margin:0 auto;">
+            <span class="badge" style="background:rgba(139,144,160,0.15);color:var(--text-muted);border-color:rgba(139,144,160,0.3);">Bonus — Optionnel</span>
+            <h1>Fiche 6 — Signaler à l'ACPR (Banque de France)</h1>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div style="background:rgba(139,144,160,0.08);border:1px solid rgba(139,144,160,0.2);border-left:4px solid var(--text-muted);border-radius:8px;padding:1rem 1.5rem;margin:1rem 0;font-size:0.95rem;">
+            <strong>Pourquoi cette fiche est optionnelle ?</strong> Les fiches 1 à 5 (DGCCRF, AMF, arguments, UFC, plainte pénale) couvrent déjà les principaux recours. L'ACPR est un angle <strong>complémentaire</strong> qui vise spécifiquement la question de la <strong>régulation des produits financiers</strong>. Si vous avez le temps, ce signalement renforce le dossier global, mais il n'est pas indispensable.
+        </div>
+
+        <div class="info-box">
+            <strong>Pourquoi l'ACPR ?</strong> L'Autorité de Contrôle Prudentiel et de Résolution (Banque de France) contrôle les établissements financiers. Si la plateforme commercialisait des produits financiers sans les autorisations nécessaires, l'ACPR est compétente pour enquêter. Le signalement est <strong>gratuit</strong> et peut être <strong>anonyme</strong>.
+        </div>
+
+        <h2>Étape 1 — Accéder au formulaire</h2>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <h3>Aller sur le site de l'ACPR</h3>
+            <p>Rendez-vous sur :</p>
+            <p style="margin-top:0.5rem;">
+                <a href="https://acpr.banque-france.fr/fr/webform/soumettre-un-signalement-lacpr" target="_blank" style="font-weight:600;font-size:1rem;">
+                    acpr.banque-france.fr &rarr; Soumettre un signalement
+                </a>
+            </p>
+        </div>
+
+        <h2>Étape 2 — Remplir le formulaire</h2>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <h3>Identification (facultative)</h3>
+            <p>Le formulaire demande d'abord : <strong>"Acceptez-vous de décliner votre identité ?"</strong></p>
+            <ul>
+                <li><strong>Oui</strong> (recommandé) : renseignez vos nom, prénom et email. L'ACPR pourra vous recontacter.</li>
+                <li><strong>Non</strong> : le signalement sera anonyme.</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <h3>Informations sur le signalement</h3>
+            <p>Remplissez les champs suivants :</p>
+            <ul>
+                <li><strong>Entreprise concernée :</strong> voir le texte type ci-dessous</li>
+                <li><strong>Votre lien avec la personne signalée :</strong> "Client / Investisseur"</li>
+                <li><strong>Période des faits rapportés :</strong> de votre date de souscription au 14 mars 2026</li>
+                <li><strong>Préciser les faits :</strong> utilisez le texte type ci-dessous</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <h3>Consentement</h3>
+            <p>Cochez la case : <em>"J'accepte que mes données à caractère personnel fassent l'objet d'un traitement"</em></p>
+        </div>
+
+        <h2>Étape 3 — Texte type pour la description des faits</h2>
+
+        <div class="template-box" id="template-acpr">
+            <button class="copy-btn" onclick="copyTemplate()">Copier le texte</button>
+            <h4>Modèle de signalement ACPR</h4>
+
+            <div id="acpr-text">
+            <p><strong>Entreprise concernée :</strong><br>
+            Manse France SAS — RCS Paris 951 387 513 — 33 rue La Fayette, 75009 Paris<br>
+            Manse Emetteur SA — RCS Paris 940 627 664 — 34 bd des Italiens, 75009 Paris<br>
+            Manse Plateforme SAS (gestionnaire de royaltiz.pro)<br>
+            Groupe opérant sous la marque "Royaltiz"</p>
+            <br>
+            <p><strong>Lien :</strong> Client / Investisseur</p>
+            <br>
+            <p><strong>Période :</strong> De <span class="placeholder">[DATE SOUSCRIPTION]</span> au 14 mars 2026</p>
+            <br>
+            <p><strong>Faits signalés :</strong></p>
+            <br>
+            <p>Les sociétés du Groupe Manse opèrent la plateforme Royaltiz (royaltiz.pro) qui commercialise des contrats "Roy Performance" — produits financiers donnant droit à une rémunération liée à la performance économique de talents sportifs et artistiques, sur une durée contractuelle de 10 ans.</p>
+            <br>
+            <p>Manse Emetteur SA se présente comme "société émettrice de titres financiers" dans son courrier du 14 mars 2026. Le plan de remédiation mentionne la conversion possible des contrats Roy en "titres obligataires" négociables sur une plateforme à Amsterdam, ainsi que la souscription d'actions de la holding à 10 700&euro;.</p>
+            <br>
+            <p>Je signale les manquements suivants :</p>
+            <br>
+            <p>1. <strong>Commercialisation de produits financiers</strong> : Les contrats Roy sont présentés comme des instruments financiers (rendement basé sur un algorithme, durée de 10 ans, marché secondaire, "yield" mensuel). La question se pose de savoir si ces produits disposaient des autorisations réglementaires nécessaires.</p>
+            <br>
+            <p>2. <strong>Émission de titres</strong> : Le plan de remédiation propose la conversion en "titres obligataires" et la souscription d'actions, ce qui relève de l'émission de valeurs mobilières soumise à autorisation.</p>
+            <br>
+            <p>3. <strong>Indemnisation dérisoire</strong> : L'option de résiliation propose 2% du montant d'introduction &times; années restantes, soit 12% de la valeur initiale pour un investisseur de 4 ans. Les rendements promis allaient jusqu'à 50% APY.</p>
+            <br>
+            <p>4. <strong>Structure opaque</strong> : Le groupe opère via de multiples sociétés (Manse France SAS, Manse Emetteur SA, Manse Liquidite, Manse Plateforme SAS, Holding RLTZ, Manse International), rendant difficile l'identification des responsabilités.</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <strong>Bon à savoir :</strong> Les données sont conservées <strong>5 ans</strong> si le signalement donne lieu à des suites, sinon <strong>1 an</strong>. Vous pouvez aussi contacter l'ACPR par téléphone au <strong>01 42 44 66 88</strong>.
+        </div>
+
+        <div class="nav-bottom">
+            <a href="fiche-plainte.html">&larr; Fiche 5 — Plainte pénale</a>
+            <a href="index.html">Retour à l'accueil &rarr;</a>
+        </div>
+    </div>
+
+    <script>
+        function copyTemplate() {
+            const el = document.getElementById('acpr-text');
+            const text = el.innerText.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = 'Copié !';
+                setTimeout(() => btn.textContent = 'Copier le texte', 2000);
+            });
+        }
+    </script>
+</body>
+</html>
