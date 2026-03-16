@@ -61,17 +61,95 @@
             <h3>Déposer votre dossier</h3>
             <p>Le formulaire vous demandera :</p>
             <ul>
-                <li><strong>Vos coordonnées</strong> (nom, prénom, email)</li>
-                <li><strong>Description des faits</strong> : décrivez votre investissement sur la plateforme, les rendements promis, et le plan de remédiation du 14 mars 2026</li>
+                <li><strong>Vos coordonnées</strong> : nom, prénom, email, téléphone</li>
+                <li><strong>Description des faits</strong> : utilisez le texte type ci-dessous</li>
                 <li><strong>Montant du préjudice</strong> : montant investi vs indemnité proposée</li>
-                <li><strong>Pièces justificatives</strong> : mail de remédiation, preuves de souscription, captures des rendements promis</li>
+                <li><strong>Pièces justificatives</strong> : voir la liste détaillée plus bas</li>
             </ul>
         </div>
 
-        <h2>Étape 3 — Suivi</h2>
+        <h2>Étape 3 — Texte type pour la description des faits</h2>
+
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:1.5rem 2rem;margin:1.5rem 0;font-size:0.92rem;line-height:1.8;position:relative;" id="template-avi">
+            <button onclick="copyTemplate()" style="position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;border:none;padding:0.4rem 0.9rem;border-radius:6px;cursor:pointer;font-size:0.8rem;font-weight:600;">Copier le texte</button>
+            <h4 style="color:var(--accent-light);margin-bottom:1rem;">Modèle de description (Collectif AVI)</h4>
+            <div id="avi-text">
+            <p><strong>Plateforme concernée :</strong> Royaltiz (royaltiz.pro)<br>
+            <strong>Sociétés :</strong> Manse France SAS (RCS Paris 951 387 513) et Manse Emetteur SA (RCS Paris 940 627 664)<br>
+            <strong>Dirigeant identifié :</strong> Christophe Vattier (signataire du mail de remédiation)</p>
+            <br>
+            <p><strong>Mon investissement :</strong><br>
+            J'ai investi <span style="background:rgba(255,197,107,0.15);color:var(--warning);padding:0.1rem 0.4rem;border-radius:3px;font-family:monospace;font-size:0.88rem;">[MONTANT]</span>&euro; sur la plateforme Royaltiz entre <span style="background:rgba(255,197,107,0.15);color:var(--warning);padding:0.1rem 0.4rem;border-radius:3px;font-family:monospace;font-size:0.88rem;">[DATE DÉBUT]</span> et <span style="background:rgba(255,197,107,0.15);color:var(--warning);padding:0.1rem 0.4rem;border-radius:3px;font-family:monospace;font-size:0.88rem;">[DATE FIN]</span>, en souscrivant des contrats "Roy Performance" d'une durée de 10 ans.</p>
+            <br>
+            <p><strong>Les promesses :</strong><br>
+            La plateforme communiquait sur des rendements allant jusqu'à 50% APY (article de blog du 12/03/2023). La fonctionnalité "Yield Predict" affichait des fourchettes de 2 à 19,5% APY. Des témoignages mis en avant par la plateforme montraient des investisseurs avec 29% de rendement annuel et "330&euro;/mois de gains". Le titre d'un article officiel promettait "Gagnez +2000&euro; par mois grâce au rendement".</p>
+            <br>
+            <p><strong>Le plan de remédiation (14 mars 2026) :</strong><br>
+            Manse Emetteur SA m'a notifié un plan de remédiation suite à une non-conformité réglementaire. Les 4 options proposées sont toutes défavorables :</p>
+            <p style="padding-left:1rem;">
+            - <strong>Option 1</strong> : Résiliation anticipée. Indemnité = 2% du montant d'introduction (2&euro;) &times; années restantes. Pour un contrat de 4 ans d'ancienneté : 0,24&euro;, soit <strong>12% de la valeur initiale</strong>.<br>
+            - <strong>Option 2</strong> : Conversion en titres obligataires, conditionnée à un prospectus non encore publié.<br>
+            - <strong>Option 3</strong> : Conserver les contrats en l'état.<br>
+            - <strong>Option 4</strong> (si en perte de capital) : Souscrire des actions à 10 700&euro; en considérant que "la valeur résiduelle des Roys est nulle".</p>
+            <br>
+            <p><strong>Mon préjudice :</strong><br>
+            Montant investi : <span style="background:rgba(255,197,107,0.15);color:var(--warning);padding:0.1rem 0.4rem;border-radius:3px;font-family:monospace;font-size:0.88rem;">[MONTANT]</span>&euro;<br>
+            Indemnité proposée (Option 1) : <span style="background:rgba(255,197,107,0.15);color:var(--warning);padding:0.1rem 0.4rem;border-radius:3px;font-family:monospace;font-size:0.88rem;">[INDEMNITÉ]</span>&euro;<br>
+            Perte : <span style="background:rgba(255,197,107,0.15);color:var(--warning);padding:0.1rem 0.4rem;border-radius:3px;font-family:monospace;font-size:0.88rem;">[PERTE]</span>&euro;</p>
+            <br>
+            <p><strong>Autres éléments :</strong><br>
+            - Les chiffres de redistribution sont incohérents : 2,5M&euro; annoncés en août 2025, puis 7M&euro; en mars 2026, en intégrant rétroactivement des "bonus missions".<br>
+            - Le plan ne tient aucun compte de l'ancienneté, du nombre de contrats détenus, ni du statut VIP.<br>
+            - De nombreux investisseurs sont concernés.</p>
+            <br>
+            <p>Je souhaite être intégré dans un recours collectif si une procédure est en cours ou envisagée.</p>
+            </div>
+        </div>
+
+        <h2>Étape 4 — Pièces à joindre</h2>
 
         <div class="step">
             <span class="step-number">3</span>
+            <h3>Documents à préparer</h3>
+            <ul>
+                <li>Mail du <strong>14 mars 2026</strong> (plan de remédiation) :
+                    <ul style="margin-top:0.3rem;">
+                        <li>Exportez-le en PDF depuis votre boîte mail (<strong>Ctrl+P</strong> &rarr; Enregistrer en PDF)</li>
+                    </ul>
+                </li>
+                <li>Documents contractuels :
+                    <ul style="margin-top:0.3rem;">
+                        <li><a href="pdfs/contract.pdf" download>Contrat (version 25/10/2024)</a></li>
+                        <li><a href="pdfs/legal_TERMS_OF_SALE.pdf" download>CGV (version 09/05/2024)</a></li>
+                    </ul>
+                </li>
+                <li>Preuves des rendements promis :
+                    <ul style="margin-top:0.3rem;">
+                        <li><a href="pdfs/blog/rendement-augmentation-du-max-a-50percent-2092257d.pdf" download>"Rendement max à 50% APY"</a></li>
+                        <li><a href="pdfs/blog/gagnez-2000euro-par-mois-grace-au-rendement-5bca17da.pdf" download>"Gagnez +2000&euro;/mois"</a></li>
+                        <li><a href="pdfs/blog/new-predicted-annual-yield-f90ed33c.pdf" download>"Yield Predict : 2 à 19,5% APY"</a></li>
+                        <li><a href="pdfs/blog/money-talk-comment-cet-etudiant-gagne-sa-vie-grace-a-royaltiz-5235f8ed.pdf" download>"Étudiant : 330&euro;/mois, 29% annuel"</a></li>
+                    </ul>
+                </li>
+                <li>Preuves de souscription :
+                    <ul style="margin-top:0.3rem;">
+                        <li><strong>Captures de votre portefeuille</strong> sur la plateforme</li>
+                        <li><strong>Export CSV</strong> de l'historique des transactions</li>
+                        <li>Email d'inscription (sujet : <em>"[Prénom], bienvenue sur royaltiz !"</em>)</li>
+                    </ul>
+                </li>
+                <li>Chiffres contradictoires :
+                    <ul style="margin-top:0.3rem;">
+                        <li><a href="pdfs/blog/25-millionseuro-de-yield-paye-aux-detenteurs-de-roys-55335c95.pdf" download>"2,5M&euro; de yield payé"</a> (août 2025) vs 7M&euro; dans le mail de mars 2026</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>Étape 5 — Suivi</h2>
+
+        <div class="step">
+            <span class="step-number">4</span>
             <h3>Mise en relation avec l'équipe</h3>
             <p>Après soumission du formulaire, l'équipe du Collectif AVI vous recontactera pour :</p>
             <ul>
@@ -90,5 +168,16 @@
             <a href="fiche-reseaux.html">Fiche 9 — Prudence réseaux sociaux &rarr;</a>
         </div>
     </div>
+    <script>
+        function copyTemplate() {
+            const el = document.getElementById('avi-text');
+            const text = el.innerText.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('#template-avi button');
+                btn.textContent = 'Copié !';
+                setTimeout(() => btn.textContent = 'Copier le texte', 2000);
+            });
+        }
+    </script>
 </body>
 </html>

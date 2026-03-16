@@ -52,10 +52,30 @@
                 <a href="https://www.vigie-conso.clcv.org/" target="_blank" style="font-weight:600;font-size:1rem;">vigie-conso.clcv.org</a>
             </p>
             <ul style="margin-top:0.8rem;">
-                <li>Décrivez les pratiques de la plateforme d'investissement</li>
-                <li>Joignez vos preuves (mail de remédiation, captures de rendements promis)</li>
+                <li>Décrivez les pratiques de la plateforme d'investissement (utilisez le texte type ci-dessous)</li>
+                <li>Joignez vos preuves</li>
                 <li>Le signalement est traité par les équipes CLCV</li>
             </ul>
+        </div>
+
+        <h2>Texte type pour Vigie-Conso</h2>
+
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:1.5rem 2rem;margin:1.5rem 0;font-size:0.92rem;line-height:1.8;position:relative;" id="template-clcv">
+            <button onclick="copyTemplate()" style="position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;border:none;padding:0.4rem 0.9rem;border-radius:6px;cursor:pointer;font-size:0.8rem;font-weight:600;">Copier le texte</button>
+            <h4 style="color:var(--accent-light);margin-bottom:1rem;">Modèle de signalement Vigie-Conso</h4>
+            <div id="clcv-text">
+            <p><strong>Professionnel concerné :</strong> Manse France SAS (RCS Paris 951 387 513, 33 rue La Fayette, 75009 Paris) et Manse Emetteur SA (RCS Paris 940 627 664), opérant la plateforme Royaltiz (royaltiz.pro).</p>
+            <br>
+            <p><strong>Pratiques signalées :</strong></p>
+            <br>
+            <p>La plateforme Royaltiz commercialise des contrats "Roy Performance" (produits financiers liés aux revenus de personnalités) sur une durée contractuelle de 10 ans, avec des rendements annoncés allant jusqu'à 50% APY.</p>
+            <br>
+            <p>Le 14 mars 2026, les sociétés du groupe ont notifié un "plan de remédiation" suite à une non-conformité réglementaire. L'option de résiliation anticipée propose une indemnité de 2% du montant d'introduction &times; années restantes, soit 12% de la valeur initiale pour un investisseur de 4 ans d'ancienneté.</p>
+            <br>
+            <p>Ce plan ne tient aucun compte de l'ancienneté de l'investisseur, du nombre de contrats détenus, ni du statut VIP. Les chiffres communiqués sont incohérents (2,5M&euro; redistribués en août 2025, puis 7M&euro; annoncés en mars 2026).</p>
+            <br>
+            <p>De nombreux investisseurs sont concernés par cette situation. Je souhaite signaler ces pratiques et savoir si la CLCV peut accompagner un recours collectif.</p>
+            </div>
         </div>
 
         <div class="step">
@@ -85,5 +105,16 @@
             <a href="fiche-avi.html">Fiche 8 — Collectif AVI &rarr;</a>
         </div>
     </div>
+    <script>
+        function copyTemplate() {
+            const el = document.getElementById('clcv-text');
+            const text = el.innerText.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('#template-clcv button');
+                btn.textContent = 'Copié !';
+                setTimeout(() => btn.textContent = 'Copier le texte', 2000);
+            });
+        }
+    </script>
 </body>
 </html>
